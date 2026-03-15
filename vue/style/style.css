@@ -1,0 +1,292 @@
+/* RACINE - Déclaration des variables principales */
+
+:root {
+    --primary-color: rgb(230, 105, 60);
+    --secondary-color: rgb(235, 221, 211);
+    --third-color: rgb(247, 172, 98);
+    --text-color: #333;
+    --hover-color: rgba(230, 105, 60, 0.1);
+    --transition: all 0.3s ease;
+    --primary-font: "Faustina", serif;
+    --max-height: 100vh;
+}
+/* BODY commun à toutes les pages */
+body {
+    font-family: var(--primary-font);
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 80px;
+    background-color: rgba(247, 172, 98, 0.6);
+}
+
+/* NAVBAR commun à toutes les pages */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+/* NAVBAR - Logo de GSB à gauche */
+.navbar-logo {
+    padding-left: 2%;
+    height: 50px;
+}
+
+/* Survol du logo */
+.navbar-logo:hover {
+    transform: scale(1.05);
+}
+
+/* NAVBAR - Barre de navigation */
+.navbar-navigation {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* NAVBAR - Liste des onglets de navigation */
+.navbar-onglets {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR - Onglet de navigation */
+.navbar-onglet {
+    position: relative;
+}
+
+/* NAVBAR - Lien de navigation */
+.navbar-lien {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+/* Survol du lien de navigation */
+.navbar-lien:hover {
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+}
+
+/* NAVBAR - Bouton de déconnexion à droite */
+.button-deconnexion {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+/* Survol du bouton de deconnexion */
+.button-deconnexion:hover {
+    background-color: var(--third-color);
+    box-shadow: 0 4px 12px rgba(230, 105, 60, 0.3);
+}
+
+/* DIV commun qui gère l'affichage du contenu des pages (complète le BODY) */
+.div-principal {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    min-height: 80vh;
+}
+
+/* Titre de la page */
+h2 {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--third-color);
+    margin: 0;
+}
+
+/* vue_index.php -  STYLE DE LA PAGE D'AUTHENTIFICATION */
+
+/* DIV qui gère le formulaire d'authentification */
+.form-auth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* vue_accueil.php -  STYLE DE LA PAGE DE LISTE DES RENDEZ-VOUS */
+
+/* DIV qui gère le scrolling de la liste des rendez-vous */
+.scroll-rdv {
+    width: 94%;
+    overflow-x: auto;
+    padding: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    background: var(--secondary-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Barre de défilement */
+.scroll-rdv::-webkit-scrollbar {
+    border-radius: 10px;
+}
+
+/* Curseur de la barre de défilement */
+.scroll-rdv::-webkit-scrollbar-thumb {
+    background: var(--hover-color);
+    border: solid 2px var(--third-color);
+    border-radius: 10px;
+}
+
+/* DIV qui gère la liste des rendez-vous */
+.liste-rdv {
+    display: inline-flex;
+    gap: 20px;
+    padding: 0;
+}
+
+/* DIV qui gère l'affichage des rendez-vous */
+.rdv {
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(230, 105, 60, 0.15);
+    position: relative;
+    width: 250px;
+    height: 150px;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rdv:hover {
+    box-shadow: 0 4px 15px rgba(230, 105, 60, 0.3);
+    transform: translateY(-3px);
+}
+
+/* SPAN qui gère le texte de l'affichage des rendez-vous */
+.rdv-texte {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* SPAN qui gère l'affichage des boutons de l'affichage des rendez-vous */
+.rdv-button {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+}
+
+/* BUTTON qui gère le style des boutons de l'affichage des rendez-vous */
+.rdv-button button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+    width: 100%;
+}
+
+/* Survol des bouton de l'affichage des rendez-vous */
+.rdv-button button:hover {
+    background-color: var(--third-color);
+    box-shadow: 0 4px 12px rgba(230, 105, 60, 0.3);
+}
+
+/* vue_rdv.php -  STYLE DE LA PAGE D'UN RENDEZ-VOUS */
+
+.informations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px;
+}
+.informations > div {
+    width: 43%;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    border: 1px solid rgba(230, 105, 60, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+
+.informations .medicaments {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.informations .medicaments h3 {
+    width: 100%;
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.info-medicament {
+    border: 2px solid var(--primary-color);
+    width: 35%;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(230, 105, 60, 0.15);
+    padding: 20px;
+    transition: var(--transition);
+}
+
+.info-medicament:hover {
+    box-shadow: 0 4px 15px rgba(230, 105, 60, 0.3);
+    transform: translateY(-3px);
+    border-color: var(--third-color);
+}
+
+.info-medicament h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--third-color);
+    padding-bottom: 10px;
+}
+
+.info-medicament p {
+    margin: 8px 0;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.info-medicament p strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
