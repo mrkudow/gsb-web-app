@@ -1,6 +1,6 @@
 <header class="navbar">
     <div class="navbar-logo">
-        <a href="./vue_accueil.php"><img src="../vue/images/logo.png" alt="Logo" class="navbar-logo"></a>
+        <a href="../controleur/accueil.php"><img src="../vue/images/logo.png" alt="Logo" class="navbar-logo"></a>
     </div>
     <?php if ($_SESSION['user']): ?>
         <nav class="navbar-navigation">
